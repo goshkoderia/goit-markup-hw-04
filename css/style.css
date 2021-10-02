@@ -46,43 +46,13 @@ h1,h2,h3,h4,h5,h6,p,ul,a
     display: flex;
     align-items: center;
     margin: 0 auto;
-    max-width: 1170px;
+    
 }
 .header-navigation
 {
     display: flex;
     align-items: center;
 
-}
-.navigation-list
-{
-    display: flex;
-    margin-left: 93px;
-    
-}                   
-.navigation-link
-{
-    padding: 32px 0;
-}                 
-
-.header-contacts
-{
-    display: flex;
-    margin-left: auto;
-}
-.header-contacts-container
-{
-    display: flex;
-    align-items: baseline;
-    
-}
-.header-contacts-container:not(:last-child)
-{
-    margin-right: 30px;
-}
-.header-contacts-container:hover .header-icon
-{
-    fill:#2196F3;
 }
 .navigation-logo
 {
@@ -98,6 +68,12 @@ h1,h2,h3,h4,h5,h6,p,ul,a
 {
     color: #2196F3;
 }
+.navigation-list
+{
+    display: flex;
+    margin-left: 93px;
+    
+}
 .navigation-item:not(:last-child)
 {
 margin-right: 50px;
@@ -108,10 +84,28 @@ font-weight: 500;
 font-size: 14px;
 line-height:calc(16 / 14);
 color: #212121;
+
+padding: 32px 0;
 }
 .navigation-link:hover,.navigation-link:focus
 {
     color: #2196F3;
+}                              
+
+.header-contacts
+{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+.header-contacts-container
+{
+    display: flex;
+    
+}
+.header-contacts-container:not(:last-child)
+{
+    margin-right: 30px;
 }
 .header-contact
 {
@@ -120,14 +114,32 @@ font-size:14px;;
 line-height: calc(16 / 14);
 color: #757575;
 
+padding: 32px 0;
+
+display: flex;
+align-items: center;
 }
+.icon-email
+{
+    width: 16px;
+    height: 12px;
+
+    margin-right: 10px;
+}
+.icon-phone
+{
+    width: 10px;
+    height: 16px;
+
+    margin-right: 10px;
+}
+
+
+
+
 .header-contact:not(:last-child)
 {
     margin-right: 50px;
-}
-.header-contact:hover,.header-contact:focus
-{
-    color: #2196F3;
 }
 
 .header-portfolio
@@ -141,21 +153,14 @@ color: #757575;
     margin-right: 10px;
     fill:  #757575;
 }
-.icon-email
+
+
+
+.header-contact:hover,.header-contact:focus
 {
-    width: 16px;
-    height: 12px;
-}
-.icon-phone
-{
-    width: 10px;
-    height: 16px;
-}
- .header-contact:hover .icon-phone
-{
+    color:  #2196F3;
     fill: #2196F3;
 }
-
 /*---------------------------------------------------SECTION 1---------------------------------------------------*/
 
 
@@ -319,14 +324,14 @@ color: #212121;
 {
     padding-top: 94px;
     padding-bottom: 94px;
-    ;
+    background-color:  #F5F4FA;  
 }
 .container-team
 {
     
     display: flex;
     flex-wrap: wrap;
-    background-color:  #F5F4FA;   
+     
 }
 .team-title
 {
@@ -344,9 +349,14 @@ color: #212121;
     padding: 0;
 
 }
+.team-item
+{
+    background-color: #FFFFFF;
+}
 .team-item:not(:last-child)
 {
     margin-right: 30px;
+    
 }
 .container-card-team
 {
@@ -437,7 +447,7 @@ color: #757575;
     display: flex;
 }
 
-.regular-customers-item
+.regular-customers-link
 {
     width: 170px;
     height: 92px;
@@ -452,20 +462,23 @@ color: #757575;
 {
     margin-right: 30px;
 }
-.regular-customers-item:hover
-{
-    border-color:#2196F3;
-}
-.regular-customers-item:hover .regular-customers-icon
-{
-    fill: #2196F3;
-}
+
 .regular-customers-icon
 {
     width: 106px;
     height: 60px;
     fill: #AFB1B8;
 }
+.regular-customers-link:hover ,.regular-customers-link:focus
+{
+    border-color: #2196F3;
+}
+.regular-customers-link:hover .regular-customers-icon ,.regular-customers-link:focus .regular-customers-icon
+{
+    fill: #2196F3;
+}
+
+
 /*------------------------------------------------------------FOOTER----------------------------------------------------------------*/
 
 
@@ -542,7 +555,7 @@ margin-top: 9px;
     display: flex;
     margin-top:20px ;
 }
-.footer-social-item
+.footer-social-link
 {
     display: flex;
     width: 44px;
@@ -556,10 +569,15 @@ margin-top: 9px;
 {
     margin-right: 10px;
 }
-.footer-social-item:hover
+.footer-social-link:hover , .footer-social-link:focus
 {
-    background-color: #2196F3;;
+    background-color: #2196F3;
 }
+.footer-social-item:focus
+{
+   background-color:#2196F3;
+}
+
 
 .footer-social-link-icon
 {
@@ -568,6 +586,10 @@ margin-top: 9px;
     fill: #FFFFFF;
 }
 /*---------------------------------------------------page PORTFOLIO---------------------------------*/
+.header-portfolio
+{
+    border-bottom: 1px solid #ECECEC;
+}
 .portfolio
 {
     padding-top: 94px;
@@ -623,23 +645,25 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 }
 .portfolio-item
 {
-    flex-basis: calc((100% / 3) - 30 px);
+    flex-basis: calc((100% / 3) - 30px);
     margin-left: 30px;
     margin-bottom: 30px;
+    
     
 }
 .portfolio-item:hover
 {
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border: 1px solid #EEEEEE;
+  
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-item-container
 {
     border: 1px solid #EEEEEE;
 
-    padding: 20px 24px;
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-bottom: 20px;
+    padding-right: auto;
 }
 .portfolio-item-title
 {
